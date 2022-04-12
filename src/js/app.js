@@ -12,7 +12,7 @@ li.forEach( (tab, index) => {
       tab.classList.remove('active');
     });
     bloques[index].classList.add('active')
-    li[index].classList.add('active')
+    li[index].classList.add('active');
     
   })
 });
