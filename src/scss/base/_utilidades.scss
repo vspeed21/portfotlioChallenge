@@ -1,0 +1,44 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.text-center{
+  text-align: center;
+}
+
+.font-bold{
+  font-weight: bold;
+}
+
+.border-radius-12{
+  border-radius: 1.2rem;
+}
+
+@include m.tablet{
+  .flex{
+    display: flex;
+  }
+}
+
+@include m.tablet{
+  .grid{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+  }
+}
+
+.mt-3{
+  margin-top: 3rem;
+}
+
+.p-2{
+  padding: 2rem;
+}
+
+.bg-blanco{
+  background-color: v.$blanco;
+}
+
+.centrado{
+  margin: 3rem auto 0 auto;
+}

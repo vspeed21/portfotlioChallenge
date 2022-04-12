@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,*::after, *::before{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor{
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+body{
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  background-color: v.$gris;
+}

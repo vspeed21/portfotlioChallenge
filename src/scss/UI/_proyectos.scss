@@ -1,0 +1,113 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.proyectos{
+
+  h2{
+    font-size: 1.8rem;
+    color: v.$colorTitulo;
+  }
+
+  ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  li{
+    cursor: pointer;
+    border: 1px solid v.$colorTitulo;
+    border-radius: 1.2rem;
+    padding: 1rem;
+    width: 7rem;
+    font-size: 1.4rem;
+    color: v.$colorTitulo;
+    text-align: center;
+    transition-property: background-color;
+    transition-duration: .3s;
+
+    &.active,
+    &:hover{
+      background-color: v.$colorPrimario;
+      color: v.$blanco;
+      font-weight: bold;
+      border: none;
+    }
+  }
+}
+
+.subproyectos{
+  position: relative;
+
+  .bloque{
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+
+    &.active{
+      opacity: 1;
+    }
+  }
+}
+
+.bloque-grid{
+  display: grid;
+    grid-template-columns: repeat(3, 30rem);
+    column-gap: 2rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    > *{
+        scroll-snap-align: center;
+    }
+    @include m.tablet {
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+    }
+
+  .proyecto{
+
+    .mask{
+      overflow: hidden;
+      img{
+        width: 30rem;
+        height: 20rem;
+        transition: all .3s ease-in;
+
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    h2{
+      font-size: 2rem;
+      color: v.$colorTitulo;
+      margin-top: 2rem;
+    }
+
+    p{
+      font-size: 1.6rem;
+      color: #828282;
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+
+    .hashtag{
+      display: flex;
+      gap: 2rem;
+
+      p{
+        padding: .3rem;
+        background-color: lighten(v.$colorPrimario, 40%);
+        border-radius: 1.2rem;
+        color: v.$colorTitulo;
+      }
+    }
+  }
+}

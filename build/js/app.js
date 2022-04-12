@@ -1,0 +1,1 @@
+const li=document.querySelectorAll("#li"),bloques=document.querySelectorAll("#bloque");li.forEach(((e,l)=>{e.addEventListener("click",(()=>{bloques.forEach((e=>{e.classList.remove("active")})),li.forEach((e=>{e.classList.remove("active")})),bloques[l].classList.add("active"),li[l].classList.add("active")}))}));

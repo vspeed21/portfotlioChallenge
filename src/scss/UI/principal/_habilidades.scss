@@ -1,0 +1,64 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.destrezas{
+
+  @include m.tablet {
+    width: 40rem;
+  }
+}
+
+.habilidades{
+  padding: 2rem;
+  width: 36rem;
+  margin: 0 auto;
+
+  h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: v.$colorTitulo;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    
+    p:first-child{
+      width: 12rem;
+      @include m.tablet {
+        width: 12rem;
+      }
+    }
+    
+  }
+
+  ul{
+    margin-top: 1rem;
+  }
+
+  p{
+    font-size: 1.6rem;
+    color: v.$colorTitulo;
+    // display: inline-block;
+  }
+
+  .diez{
+    @include m.range(10rem);
+  }
+  .dieciocho{
+    @include m.range(18rem);
+  }
+  .quince{
+    @include m.range(15rem);
+  }
+  .doce{
+    @include m.range(12rem);
+  }
+  .diecisiete{
+    @include m.range(17rem);
+  }
+  .cinco{
+    @include m.range(5rem)
+  }
+
+}
